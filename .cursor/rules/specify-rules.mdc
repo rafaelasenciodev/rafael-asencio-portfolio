@@ -4,5 +4,13 @@ alwaysApply: true
 
 <!-- SPECKIT START -->
 For additional context about technologies to be used, project structure,
-shell commands, and other important information, read the current plan
+shell commands, and other important information, read the current plan at
+`specs/001-ios-engineer-portfolio/plan.md`.
+
+Key artifacts:
+- Technical requirements: `specs/001-ios-engineer-portfolio/requirements.md`
+- Architecture: `specs/001-ios-engineer-portfolio/architecture.md`
+- Data model: `specs/001-ios-engineer-portfolio/data-model.md`
+- Quickstart: `specs/001-ios-engineer-portfolio/quickstart.md`
+- Contracts: `specs/001-ios-engineer-portfolio/contracts/`
 <!-- SPECKIT END -->
