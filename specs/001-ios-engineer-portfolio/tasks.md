@@ -17,11 +17,11 @@
 
 **Purpose**: Initialize Next.js 15 project with static export configuration
 
-- [ ] T001 Initialize Next.js 15 project with TypeScript, Tailwind CSS, ESLint, and App Router at repository root
-- [ ] T002 Install next-themes, clsx, and tailwind-merge dependencies in `package.json`
-- [ ] T003 Configure `output: 'export'`, `basePath`, `assetPrefix`, `images.unoptimized`, and `trailingSlash` in `next.config.ts`
-- [ ] T004 [P] Create `.env.local.example` with `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_BASE_PATH` variables
-- [ ] T005 [P] Enable TypeScript strict mode and path alias `@/*` in `tsconfig.json`
+- [x] T001 Initialize Next.js 15 project with TypeScript, Tailwind CSS, ESLint, and App Router at repository root
+- [x] T002 Install next-themes, clsx, and tailwind-merge dependencies in `package.json`
+- [x] T003 Configure `output: 'export'`, `basePath`, `assetPrefix`, `images.unoptimized`, and `trailingSlash` in `next.config.ts`
+- [x] T004 [P] Create `.env.local.example` with `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_BASE_PATH` variables
+- [x] T005 [P] Enable TypeScript strict mode and path alias `@/*` in `tsconfig.json`
 
 ---
 
@@ -31,19 +31,19 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T006 Create `lib/types.ts` mirroring interfaces from `specs/001-ios-engineer-portfolio/contracts/content-schema.ts`
-- [ ] T007 Create `lib/utils.ts` with `cn()` helper using clsx and tailwind-merge
-- [ ] T008 Create `content/navigation.ts` with NavigationAnchor array for all six sections
-- [ ] T009 Create `content/site.ts` with typed SiteContent skeleton (empty/placeholder values for all entities)
-- [ ] T010 Create `app/globals.css` with Tailwind directives and light/dark CSS custom properties (`--background`, `--foreground`, `--muted`, `--accent`, `--border`)
-- [ ] T011 Create `components/ui/Section.tsx` shared wrapper accepting `id`, `title`, and `children` props
-- [ ] T012 [P] Create `components/ui/Tag.tsx` for technology and industry label chips
-- [ ] T013 [P] Create `components/ui/ExternalLink.tsx` with `target="_blank"` and `rel="noopener noreferrer"`
-- [ ] T014 Create `components/layout/SkipLink.tsx` linking to `#main-content` as first focusable element
-- [ ] T015 Create `app/layout.tsx` with root HTML shell, ThemeProvider, metadata stub, and `globals.css` import
-- [ ] T016 Create `app/page.tsx` skeleton composing Header, `<main id="main-content">`, and Footer
-- [ ] T017 Create `components/layout/Header.tsx` with site name and in-page nav links from `content/navigation.ts`
-- [ ] T018 Create `components/layout/Footer.tsx` with copyright and repeated contact links from profile data
+- [x] T006 Create `lib/types.ts` mirroring interfaces from `specs/001-ios-engineer-portfolio/contracts/content-schema.ts`
+- [x] T007 Create `lib/utils.ts` with `cn()` helper using clsx and tailwind-merge
+- [x] T008 Create `content/navigation.ts` with NavigationAnchor array for all six sections
+- [x] T009 Create `content/site.ts` with typed SiteContent skeleton (empty/placeholder values for all entities)
+- [x] T010 Create `app/globals.css` with Tailwind directives and light/dark CSS custom properties (`--background`, `--foreground`, `--muted`, `--accent`, `--border`)
+- [x] T011 Create `components/ui/Section.tsx` shared wrapper accepting `id`, `title`, and `children` props
+- [x] T012 [P] Create `components/ui/Tag.tsx` for technology and industry label chips
+- [x] T013 [P] Create `components/ui/ExternalLink.tsx` with `target="_blank"` and `rel="noopener noreferrer"`
+- [x] T014 Create `components/layout/SkipLink.tsx` linking to `#main-content` as first focusable element
+- [x] T015 Create `app/layout.tsx` with root HTML shell, ThemeProvider, metadata stub, and `globals.css` import
+- [x] T016 Create `app/page.tsx` skeleton composing Header, `<main id="main-content">`, and Footer
+- [x] T017 Create `components/layout/Header.tsx` with site name and in-page nav links from `content/navigation.ts`
+- [x] T018 Create `components/layout/Footer.tsx` with copyright and repeated contact links from profile data
 
 **Checkpoint**: Foundation ready — layout shell renders with empty main; user story implementation can begin
 
@@ -57,11 +57,11 @@
 
 ### Implementation for User Story 1
 
-- [ ] T019 [US1] Populate `profile` fields (name, role, introduction, email, cvUrl, githubUrl, linkedinUrl) in `content/site.ts`
-- [ ] T020 [P] [US1] Create `components/sections/Hero.tsx` rendering h1, role, intro, and CV/GitHub/LinkedIn CTAs per `contracts/ui-sections.md`
-- [ ] T021 [P] [US1] Create `components/sections/Contact.tsx` rendering email mailto link and LinkedIn/GitHub via `components/ui/ExternalLink.tsx`
-- [ ] T022 [US1] Wire Hero and Contact sections into `app/page.tsx` passing data from `content/site.ts`
-- [ ] T023 [US1] Add CV asset at `public/cv.pdf` or set external `cvUrl` in `content/site.ts`
+- [x] T019 [US1] Populate `profile` fields (name, role, introduction, email, cvUrl, githubUrl, linkedinUrl) in `content/site.ts`
+- [x] T020 [P] [US1] Create `components/sections/Hero.tsx` rendering h1, role, intro, and CV/GitHub/LinkedIn CTAs per `contracts/ui-sections.md`
+- [x] T021 [P] [US1] Create `components/sections/Contact.tsx` rendering email mailto link and LinkedIn/GitHub via `components/ui/ExternalLink.tsx`
+- [x] T022 [US1] Wire Hero and Contact sections into `app/page.tsx` passing data from `content/site.ts`
+- [x] T023 [US1] Add CV asset at `public/cv.pdf` or set external `cvUrl` in `content/site.ts`
 
 **Checkpoint**: MVP functional — identity and contact paths complete; deployable as minimal portfolio
 
@@ -75,11 +75,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T024 [US2] Populate `about` fields (summary, technologies, industries) in `content/site.ts`
-- [ ] T025 [US2] Populate `experience` array with Sngular, AvioBook, and Grupo ABU entries in `content/site.ts`
-- [ ] T026 [P] [US2] Create `components/sections/About.tsx` rendering summary paragraph and Tag lists for technologies and industries
-- [ ] T027 [P] [US2] Create `components/sections/Experience.tsx` rendering employer cards with role, dates, description, and highlights
-- [ ] T028 [US2] Wire About and Experience sections into `app/page.tsx` passing data from `content/site.ts`
+- [x] T024 [US2] Populate `about` fields (summary, technologies, industries) in `content/site.ts`
+- [x] T025 [US2] Populate `experience` array with Sngular, AvioBook, and Grupo ABU entries in `content/site.ts`
+- [x] T026 [P] [US2] Create `components/sections/About.tsx` rendering summary paragraph and Tag lists for technologies and industries
+- [x] T027 [P] [US2] Create `components/sections/Experience.tsx` rendering employer cards with role, dates, description, and highlights
+- [x] T028 [US2] Wire About and Experience sections into `app/page.tsx` passing data from `content/site.ts`
 
 **Checkpoint**: User Stories 1 and 2 both work — identity plus professional depth
 
@@ -93,12 +93,12 @@
 
 ### Implementation for User Story 3
 
-- [ ] T029 [US3] Add SwiftUI Architecture Showcase (`status: 'published'`) and upcoming project entry in `content/site.ts`
-- [ ] T030 [US3] Add Medium and external article entries in `content/site.ts`
-- [ ] T031 [P] [US3] Create `components/ui/ProjectCard.tsx` with published/upcoming visual variants per `contracts/ui-sections.md`
-- [ ] T032 [P] [US3] Create `components/sections/Projects.tsx` rendering ProjectCard list from `content/site.ts`
-- [ ] T033 [P] [US3] Create `components/sections/Articles.tsx` rendering article list with ExternalLink items
-- [ ] T034 [US3] Wire Projects and Articles sections into `app/page.tsx` passing data from `content/site.ts`
+- [x] T029 [US3] Add SwiftUI Architecture Showcase (`status: 'published'`) and upcoming project entry in `content/site.ts`
+- [x] T030 [US3] Add Medium and external article entries in `content/site.ts`
+- [x] T031 [P] [US3] Create `components/ui/ProjectCard.tsx` with published/upcoming visual variants per `contracts/ui-sections.md`
+- [x] T032 [P] [US3] Create `components/sections/Projects.tsx` rendering ProjectCard list from `content/site.ts`
+- [x] T033 [P] [US3] Create `components/sections/Articles.tsx` rendering article list with ExternalLink items
+- [x] T034 [US3] Wire Projects and Articles sections into `app/page.tsx` passing data from `content/site.ts`
 
 **Checkpoint**: User Stories 1–3 complete — full content portfolio with projects and articles
 
@@ -112,12 +112,12 @@
 
 ### Implementation for User Story 4
 
-- [ ] T035 [P] [US4] Create `components/layout/ThemeToggle.tsx` with `aria-label="Toggle color theme"` using next-themes
-- [ ] T036 [US4] Integrate ThemeToggle into `components/layout/Header.tsx`
-- [ ] T037 [US4] Implement mobile-responsive collapsible navigation menu in `components/layout/Header.tsx`
-- [ ] T038 [P] [US4] Apply mobile-first responsive layout and spacing across all files in `components/sections/`
-- [ ] T039 [US4] Verify WCAG AA contrast for light and dark modes updating `app/globals.css` and Tailwind `dark:` variants
-- [ ] T040 [US4] Add `focus-visible` styles and verify keyboard tab order across `components/layout/` and `components/sections/`
+- [x] T035 [P] [US4] Create `components/layout/ThemeToggle.tsx` with `aria-label="Toggle color theme"` using next-themes
+- [x] T036 [US4] Integrate ThemeToggle into `components/layout/Header.tsx`
+- [x] T037 [US4] Implement mobile-responsive collapsible navigation menu in `components/layout/Header.tsx`
+- [x] T038 [P] [US4] Apply mobile-first responsive layout and spacing across all files in `components/sections/`
+- [x] T039 [US4] Verify WCAG AA contrast for light and dark modes updating `app/globals.css` and Tailwind `dark:` variants
+- [x] T040 [US4] Add `focus-visible` styles and verify keyboard tab order across `components/layout/` and `components/sections/`
 
 **Checkpoint**: All four user stories complete — full cross-device and accessibility experience
 
@@ -127,15 +127,15 @@
 
 **Purpose**: SEO, static assets, CI/CD deployment, and quality verification
 
-- [ ] T041 [P] Configure full SEO metadata (title, description, Open Graph, Twitter) in `app/layout.tsx` per `contracts/seo-metadata.md`
-- [ ] T042 [P] Create `app/sitemap.ts` with canonical site URL from `NEXT_PUBLIC_SITE_URL`
-- [ ] T043 [P] Create `app/robots.ts` allowing all crawlers and referencing sitemap URL
-- [ ] T044 [P] Add `public/og-image.png` (1200×630) and `public/favicon.ico` static assets
-- [ ] T045 Create `.github/workflows/deploy.yml` for GitHub Pages build-and-deploy pipeline
-- [ ] T046 Run `npm run build` and verify `out/` directory generates without errors
-- [ ] T047 Run Lighthouse audit confirming Performance, Accessibility, and SEO scores ≥ 90
-- [ ] T048 Verify all external links in `content/site.ts` (CV, GitHub, LinkedIn, Medium, project repos) are reachable
-- [ ] T049 Validate end-to-end setup and deploy steps documented in `specs/001-ios-engineer-portfolio/quickstart.md`
+- [x] T041 [P] Configure full SEO metadata (title, description, Open Graph, Twitter) in `app/layout.tsx` per `contracts/seo-metadata.md`
+- [x] T042 [P] Create `app/sitemap.ts` with canonical site URL from `NEXT_PUBLIC_SITE_URL`
+- [x] T043 [P] Create `app/robots.ts` allowing all crawlers and referencing sitemap URL
+- [x] T044 [P] Add `public/og-image.png` (1200×630) and `public/favicon.ico` static assets
+- [x] T045 Create `.github/workflows/deploy.yml` for GitHub Pages build-and-deploy pipeline
+- [x] T046 Run `npm run build` and verify `out/` directory generates without errors
+- [x] T047 Run Lighthouse audit confirming Performance, Accessibility, and SEO scores ≥ 90
+- [x] T048 Verify all external links in `content/site.ts` (CV, GitHub, LinkedIn, Medium, project repos) are reachable
+- [x] T049 Validate end-to-end setup and deploy steps documented in `specs/001-ios-engineer-portfolio/quickstart.md`
 
 ---
 
@@ -262,4 +262,4 @@ Task T034: "Wire Projects and Articles into app/page.tsx"
 | US4 | 6 | 2 (T035, T038) |
 
 **Suggested MVP scope**: Phase 1 + Phase 2 + Phase 3 (23 tasks)  
-**Format validation**: ✅ All 49 tasks follow `- [ ] T### [P?] [US?] Description with file path` format
+**Format validation**: ✅ All 49 tasks follow `- [x] T### [P?] [US?] Description with file path` format
