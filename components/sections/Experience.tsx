@@ -7,6 +7,24 @@ interface ExperienceProps {
   experience: ExperienceEntry[];
 }
 
+function HighlightItem({ text }: { text: string }) {
+  const separator = text.indexOf(": ");
+  if (separator === -1) {
+    return <li className="text-muted">{text}</li>;
+  }
+
+  const client = text.slice(0, separator);
+  const description = text.slice(separator + 2);
+
+  return (
+    <li className="text-muted">
+      <span className="font-semibold text-foreground">{client}</span>
+      {": "}
+      {description}
+    </li>
+  );
+}
+
 export function Experience({ experience }: ExperienceProps) {
   return (
     <Section id="experience" title="Experience">
@@ -26,7 +44,7 @@ export function Experience({ experience }: ExperienceProps) {
             {entry.highlights && entry.highlights.length > 0 && (
               <ul className="mt-4 list-disc space-y-2 pl-5 text-muted">
                 {entry.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
+                  <HighlightItem key={highlight} text={highlight} />
                 ))}
               </ul>
             )}

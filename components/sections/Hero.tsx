@@ -1,4 +1,5 @@
 import type { Profile } from "@/lib/types";
+import { withBasePath } from "@/lib/utils";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 
 interface HeroProps {
@@ -27,7 +28,7 @@ export function Hero({ profile }: HeroProps) {
           aria-label="Primary actions"
         >
           <a
-            href={profile.cvUrl}
+            href={withBasePath(profile.cvUrl)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
